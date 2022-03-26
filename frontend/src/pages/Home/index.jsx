@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container, Programas, About } from './styles';
+import Slider from '../../components/Slider';
+import { Container, Programas, About, SliderComponent } from './styles';
 
 import cabeca from '../../assets/cabecas.svg';
 
@@ -72,6 +73,10 @@ const Home = () => {
           <img src={cabeca} alt="Ilustrativo do insituto" />
         </div>
       </About>
+      <SliderComponent>
+        <h1>Áreas de Atuação</h1>
+        <Slider />
+      </SliderComponent>
     </Container>
   );
 };

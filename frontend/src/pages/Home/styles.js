@@ -142,3 +142,50 @@ export const About = styled.div`
     }
   }
 `;
+
+export const SliderComponent = styled.div`
+  height: 572px;
+  background-color: #eff1f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin-top: 0;
+    font-size: 56px;
+    font-weight: 800;
+    color: #21253c;
+  }
+
+  .swiper {
+    width: 841px;
+    height: 284px;
+  }
+
+  .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    p {
+      font-size: 16px;
+      font-weight: semi-bold;
+    }
+  }
+
+  .swiper-slide img {
+    height: 209px;
+  }
+`;
