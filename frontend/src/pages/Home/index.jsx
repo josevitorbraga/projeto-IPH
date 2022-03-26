@@ -5,6 +5,7 @@ import Slider from '../../components/Slider';
 import { Container, Programas, About, SliderComponent } from './styles';
 
 import cabeca from '../../assets/cabecas.svg';
+import segment from '../../assets/segment.png';
 
 const Home = () => {
   const [programa, setPrograma] = useState(true);
@@ -77,6 +78,24 @@ const Home = () => {
         <h1>Áreas de Atuação</h1>
         <Slider />
       </SliderComponent>
+      <About>
+        <div className="content">
+          <p className="header">
+            <span>Conheça nossos programas</span>
+          </p>
+          <p className="description">
+            O IPH desenvolveu PROGRAMAS específicos visando identificar,
+            desenvolver ou tornar mais eficiente o potencial do indivíduo, tendo
+            como base principal o Método Feuerstein. Suas ferramentas e técnicas
+            identificam e melhoram o potencial de aprendizagem de uma pessoa.
+          </p>
+          <Link to="#sobre">Ler tudo</Link>
+        </div>
+
+        <div className="image-container bigger relative">
+          <img src={segment} alt="Ilustrativo do insituto" />
+        </div>
+      </About>
     </Container>
   );
 };

@@ -141,9 +141,23 @@ export const About = styled.div`
       width: 612px;
     }
   }
+
+  .relative {
+    position: relative;
+    top: 40px;
+  }
+
+  .bigger {
+    img {
+      height: 614px;
+      width: 744px;
+    }
+  }
 `;
 
 export const SliderComponent = styled.div`
+  --swiper-navigation-size: 27px;
+
   height: 572px;
   background-color: #eff1f5;
   display: flex;
@@ -159,11 +173,37 @@ export const SliderComponent = styled.div`
   }
 
   .swiper {
-    width: 841px;
+    width: 1031px;
     height: 284px;
   }
 
+  /* .swiper-slide {
+    /* Center slide text vertically 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    p {
+      font-size: 16px;
+      font-weight: semi-bold;
+    }
+  } */
+
   .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: none;
+
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -178,14 +218,14 @@ export const SliderComponent = styled.div`
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-
-    p {
-      font-size: 16px;
-      font-weight: semi-bold;
-    }
   }
 
   .swiper-slide img {
     height: 209px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #707070;
   }
 `;

@@ -1,6 +1,8 @@
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Container } from './styles';
+
 import habilidadesImg from '../../assets/altas-habilidades.svg';
 import superdotacao from '../../assets/superdotacao.svg';
 import pessoal from '../../assets/pessoal.svg';
@@ -9,24 +11,23 @@ import profissional from '../../assets/profissional.svg';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // import required modules
-import { FreeMode, Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 
 const Slider = () => {
   return (
-    <>
+    <Container>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
-        freeMode={true}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
         navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, Navigation, FreeMode]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -50,7 +51,7 @@ const Slider = () => {
           <p>Escolha Profissional</p>
         </SwiperSlide>
       </Swiper>
-    </>
+    </Container>
   );
 };
 
