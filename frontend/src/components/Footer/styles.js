@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 352px;
@@ -11,8 +11,10 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  width: 100%;
+  height: 286px;
   justify-content: space-evenly;
-  margin-top: 57px;
+  align-items: center;
 
   h5 {
     margin-top: 0;
