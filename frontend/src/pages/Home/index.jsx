@@ -6,6 +6,7 @@ import { Container, Programas, About, SliderComponent } from './styles';
 
 import cabeca from '../../assets/cabecas.svg';
 import segment from '../../assets/segment.png';
+import SignupNewsletter from '../../components/SignupNewsletter';
 
 const Home = () => {
   const [programa, setPrograma] = useState(true);
@@ -96,6 +97,14 @@ const Home = () => {
           <img src={segment} alt="Ilustrativo do insituto" />
         </div>
       </About>
+      <SliderComponent>
+        <p className="header">
+          Capacitações e <br />
+          Fromações
+        </p>
+        <Slider secondSlider />
+      </SliderComponent>
+      <SignupNewsletter />
     </Container>
   );
 };

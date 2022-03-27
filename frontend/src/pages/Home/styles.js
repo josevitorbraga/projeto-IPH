@@ -165,11 +165,13 @@ export const SliderComponent = styled.div`
   align-items: center;
   justify-content: center;
 
-  h1 {
+  h1,
+  p.header {
     margin-top: 0;
     font-size: 56px;
     font-weight: 800;
     color: #21253c;
+    text-align: center;
   }
 
   .swiper {

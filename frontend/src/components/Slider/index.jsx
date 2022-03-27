@@ -8,6 +8,7 @@ import superdotacao from '../../assets/superdotacao.svg';
 import pessoal from '../../assets/pessoal.svg';
 import educacao from '../../assets/educacao.svg';
 import profissional from '../../assets/profissional.svg';
+import placeholder from '../../assets/placeholder.svg';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,7 +18,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Pagination, Navigation } from 'swiper';
 
-const Slider = () => {
+const Slider = ({ secondSlider }) => {
   return (
     <Container>
       <Swiper
@@ -30,26 +31,53 @@ const Slider = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src={habilidadesImg} alt="Habilidades" />
-          <p>Altas Habilidades</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={superdotacao} alt="Superdotação" />
-          <p>Superdotação</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={pessoal} alt="Pessoal" />
-          <p>Pessoal</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={educacao} alt="Educação" />
-          <p>Educação</p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={profissional} alt="Profissional" />
-          <p>Escolha Profissional</p>
-        </SwiperSlide>
+        {secondSlider ? (
+          <>
+            <SwiperSlide>
+              <img src={placeholder} alt="placeholder" />
+              <p>Acesse</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={placeholder} alt="placeholder" />
+              <p>Acesse</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={placeholder} alt="placeholder" />
+              <p>Acesse</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={placeholder} alt="placeholder" />
+              <p>Acesse</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={placeholder} alt="placeholder" />
+              <p>Acesse</p>
+            </SwiperSlide>
+          </>
+        ) : (
+          <>
+            <SwiperSlide>
+              <img src={habilidadesImg} alt="Habilidades" />
+              <p>Altas Habilidades</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={superdotacao} alt="Superdotação" />
+              <p>Superdotação</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={pessoal} alt="Pessoal" />
+              <p>Pessoal</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={educacao} alt="Educação" />
+              <p>Educação</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={profissional} alt="Profissional" />
+              <p>Escolha Profissional</p>
+            </SwiperSlide>
+          </>
+        )}
       </Swiper>
     </Container>
   );
