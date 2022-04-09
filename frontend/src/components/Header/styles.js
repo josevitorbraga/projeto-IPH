@@ -35,6 +35,7 @@ export const Segment = styled.div`
   display: flex;
 
   .dropdown {
+    z-index: 1;
     margin-right: 40px;
     display: flex;
     align-items: center;
