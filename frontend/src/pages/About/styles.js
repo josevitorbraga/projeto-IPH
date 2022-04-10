@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin-top: 70px;
   .about-img img {
     width: 100%;
     position: relative;
@@ -66,4 +67,16 @@ export const Offer = styled.div`
 
 export const Team = styled.div`
   display: flex;
+
+  .text {
+    width: 600px;
+  }
+
+  .img {
+    position: absolute;
+    right: 180px;
+    img {
+      height: 896px;
+    }
+  }
 `;

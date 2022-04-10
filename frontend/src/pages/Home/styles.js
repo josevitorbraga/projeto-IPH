@@ -4,6 +4,7 @@ import programas1 from '../../assets/programas-background-1.png';
 import programa2 from '../../assets/programa-background-2.png';
 
 export const Container = styled.div`
+  margin-top: 70px;
   .fade {
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: infinite;

@@ -8,6 +8,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   color: #fff;
 
