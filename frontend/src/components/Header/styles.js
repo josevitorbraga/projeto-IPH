@@ -1,25 +1,27 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 70px;
+  height: 140px;
   background: #21253c;
   z-index: 1;
 
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  position: fixed;
-  top: 0;
-  width: 100%;
 
   color: #fff;
 
   .user {
     color: #444961;
     align-items: center;
+    .signIn {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
     a {
       margin-right: 23px;
-      color: #444961;
+      color: #fff;
     }
 
     .button {
@@ -28,9 +30,10 @@ export const Container = styled.div`
       align-items: center;
       height: 44px;
       width: 129px;
-      color: #fff;
+      color: inherit;
       border-radius: 22px;
-      background-color: #444961;
+      background-color: #5bd178;
+      font-weight: bold;
     }
   }
 `;

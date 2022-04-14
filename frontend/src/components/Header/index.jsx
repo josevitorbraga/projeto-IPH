@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+import 'flag-icons';
+
 import { Container, Segment } from './styles';
 import logo from '../../assets/header-logo.svg';
-import { FaUser, FaAngleDown } from 'react-icons/fa';
+import { FaAngleDown } from 'react-icons/fa';
 
 const Header = () => {
   const dropdownRef = useRef(null);
@@ -14,40 +16,42 @@ const Header = () => {
 
   return (
     <Container>
-      <Segment className="logo">
-        <img src={logo} alt="Instituto de Potencialidades Humanas" />
+      <Segment className='logo'>
+        <Link to='/'>
+          <img src={logo} alt='Instituto de Potencialidades Humanas' />
+        </Link>
       </Segment>
 
-      <Segment className="menu">
-        <Link to="/">Home</Link>
+      <Segment className='menu'>
+        <Link to='/sobre'>Sobre o instituto</Link>
 
         <div
           onMouseEnter={() => handleDropdown()}
           onMouseLeave={() => handleDropdown()}
-          className="dropdown"
+          className='dropdown'
         >
-          Sobre o instituto <FaAngleDown />
-          <div ref={dropdownRef} className="items hidden">
-            <Link to="/">Metodologia</Link>
-            <Link to="/">Programas</Link>
-            <Link to="/">Áreas de atuação</Link>
-            <Link to="/sobre">Sobre o instituto</Link>
+          Serviços <FaAngleDown />
+          <div ref={dropdownRef} className='items hidden'>
+            <Link to='/'>Metodologia</Link>
+            <Link to='/'>Programas</Link>
+            <Link to='/'>Áreas de atuação</Link>
+            <Link to='/sobre'>Sobre o instituto</Link>
           </div>
         </div>
 
-        <Link to="/">Notícias</Link>
+        <Link to='/'>Notícias</Link>
 
-        <Link to="/">Contato</Link>
+        <Link to='/'>Contato</Link>
       </Segment>
 
-      <Segment className="user">
-        <Link to="/">
-          <FaUser />
-        </Link>
-        <Link to="/" className="button">
+      <Segment className='user'>
+        <Link to='/' className='button'>
           Cursos
         </Link>
-        PR
+        <Link className='signIn' to='/'>
+          Entrar
+        </Link>
+        <span className='fi fi-br'></span>
       </Segment>
     </Container>
   );
