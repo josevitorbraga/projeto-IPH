@@ -23,58 +23,68 @@ const Slider = ({ secondSlider }) => {
     <Container>
       <Swiper
         slidesPerView={3}
-        spaceBetween={30}
+        //spaceBetween={0}
         slidesPerGroup={3}
         loop={true}
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className='mySwiper'
       >
         {secondSlider ? (
           <>
             <SwiperSlide>
-              <img src={placeholder} alt="placeholder" />
+              <img src={placeholder} alt='placeholder' />
               <p>Acesse</p>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={placeholder} alt="placeholder" />
+              <img src={placeholder} alt='placeholder' />
               <p>Acesse</p>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={placeholder} alt="placeholder" />
+              <img src={placeholder} alt='placeholder' />
               <p>Acesse</p>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={placeholder} alt="placeholder" />
+              <img src={placeholder} alt='placeholder' />
               <p>Acesse</p>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={placeholder} alt="placeholder" />
+              <img src={placeholder} alt='placeholder' />
               <p>Acesse</p>
             </SwiperSlide>
           </>
         ) : (
           <>
             <SwiperSlide>
-              <img src={habilidadesImg} alt="Habilidades" />
-              <p>Altas Habilidades</p>
+              <div className='sliderBox'>
+                <img src={habilidadesImg} alt='Habilidades' />
+                <p>Altas Habilidades</p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={superdotacao} alt="Superdotação" />
-              <p>Superdotação</p>
+              <div className='sliderBox'>
+                <img src={superdotacao} alt='Superdotação' />
+                <p>Superdotação</p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={pessoal} alt="Pessoal" />
-              <p>Pessoal</p>
+              <div className='sliderBox'>
+                <img src={pessoal} alt='Pessoal' />
+                <p>Pessoal</p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={educacao} alt="Educação" />
-              <p>Educação</p>
+              <div className='sliderBox'>
+                <img src={educacao} alt='Educação' />
+                <p>Educação</p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={profissional} alt="Profissional" />
-              <p>Escolha Profissional</p>
+              <div className='sliderBox'>
+                <img src={profissional} alt='Profissional' />
+                <p>Escolha Profissional</p>
+              </div>
             </SwiperSlide>
           </>
         )}

@@ -63,7 +63,7 @@ export const Segment = styled.div`
       justify-content: center;
       position: absolute;
       background-color: #21253c;
-      top: 46px;
+      top: 80px;
       font-weight: 200;
       padding: 20px;
       border-radius: 15px;
