@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: ${props => props.backGround};
   height: 1010px;
+  overflow: hidden;
 `;
 
 export const Box = styled.div`
@@ -12,6 +13,7 @@ export const Box = styled.div`
   top: -20px;
   margin: 0 5%;
   border-radius: 10px;
+  overflow: hidden;
 `;
 
 export const Content = styled.div``;
