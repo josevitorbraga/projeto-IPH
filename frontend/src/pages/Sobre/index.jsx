@@ -5,6 +5,7 @@ import SobreBoxComponent from '../../components/SobreBoxComponent';
 import SobreContentComponent from '../../components/SobreContentComponent';
 import DecoratedTitle from '../../components/DecoratedTitle';
 import OurServices from '../../components/OurServices';
+import Newsletter from '../../components/Newsletter';
 
 import { Container, Text, FullWidth } from './styles';
 
@@ -84,6 +85,7 @@ const Sobre = () => {
         </div>
       </Container>
       <IPHTopics />
+      <Newsletter color="#FACD4A" />
     </>
   );
 };

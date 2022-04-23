@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Container, Input, Text } from './styles';
 
-const Newsletter = () => {
+const Newsletter = ({ color }) => {
   return (
-    <Container>
+    <Container bg={color}>
       <Text>
         <h1>Newsletter</h1>
         <p>
@@ -12,7 +12,7 @@ const Newsletter = () => {
         </p>
       </Text>
       <Input>
-        <input type='text' placeholder='E-mail' />
+        <input type="text" placeholder="E-mail" />
         <button>Cadastrar</button>
       </Input>
     </Container>

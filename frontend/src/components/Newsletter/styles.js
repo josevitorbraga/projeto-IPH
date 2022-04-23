@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 200px;
-  background-color: #5bd178;
+  background-color: ${props => (props.bg ? props.bg : '#5bd178')};
 `;
 
 export const Text = styled.div`

@@ -15,14 +15,46 @@ export const View = styled.div`
   width: 720px;
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: end;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 
-  p {
+  .current-text {
+    animation: textFade 1s ease-in;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 10px;
+
+    img {
+      margin-right: 10px;
+      height: 30px;
+    }
+  }
+
+  .controller {
+    display: flex;
     margin-bottom: 30px;
+
+    #controller-${props => props.control} {
+      background-color: #5bd178;
+    }
+
+    .topic-select {
+      height: 10px;
+      width: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    & div + div {
+      margin-left: 10px;
+    }
   }
 `;
 

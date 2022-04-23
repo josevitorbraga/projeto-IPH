@@ -3,6 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { Container, Text, View, Content } from './styles';
 
 import missaoImg from '../../assets/topics-missao.png';
+import missaoIco from '../../assets/target.svg';
+
+import visaoIco from '../../assets/bulb.svg';
+import valoresIco from '../../assets/handshake.svg';
 
 export const IPHTopics = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,6 +19,7 @@ export const IPHTopics = () => {
       title: 'Instrumentar Indivíduos',
       text: 'à descoberta de sua estrutura de pensamento e à renovação de seu potencial cognitivo.',
       image: missaoImg,
+      icon: missaoIco,
     },
     {
       id: 1,
@@ -22,6 +27,17 @@ export const IPHTopics = () => {
       subject: 'Nossa Visão',
       title: 'Alterar visão',
       text: 'alterar texto do assunto visão',
+      image: missaoImg,
+      icon: visaoIco,
+    },
+    {
+      id: 2,
+      view: 'Valores',
+      subject: 'Nossos Valores',
+      title: 'Alterar valores',
+      text: 'alterar texto do assunto valores',
+      image: missaoImg,
+      icon: valoresIco,
     },
   ];
 
@@ -35,16 +51,36 @@ export const IPHTopics = () => {
       }
     }, 5000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, topics.length]);
 
   return (
     <Container>
       {topics
         .filter((item, index) => index === currentIndex)
         .map(item => (
-          <Content id={item.id} key={item.id}>
-            <View bg={item.image}>
-              <p>{item.view}</p>
+          <Content id={'view' + item.id} key={item.id}>
+            <View control={currentIndex} bg={item.image}>
+              <div className="current-text">
+                <img src={item.icon} alt="Target" />
+                {item.view}
+              </div>
+              <div className="controller">
+                <div
+                  id="controller-0"
+                  onClick={() => setCurrentIndex(0)}
+                  className="topic-select"
+                ></div>
+                <div
+                  id="controller-1"
+                  onClick={() => setCurrentIndex(1)}
+                  className="topic-select"
+                ></div>
+                <div
+                  id="controller-2"
+                  onClick={() => setCurrentIndex(2)}
+                  className="topic-select"
+                ></div>
+              </div>
             </View>
             <Text>
               <div className="wrapper">
