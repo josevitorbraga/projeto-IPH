@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 40px;
+  margin: 40px 0 60px 0;
 `;
 
 export const Text = styled.div`

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-hook-inview';
 
 import { Card, Container, Title } from './styles';
 
@@ -6,8 +7,29 @@ import services1 from '../../assets/services1.png';
 import services2 from '../../assets/services2.png';
 import services3 from '../../assets/services3.png';
 import services4 from '../../assets/services4.png';
+//import DecoratedTitle from '../DecoratedTitle';
 
 const OurServices = () => {
+  const [cardRef1, is1Visible] = useInView({
+    threshold: 1,
+    unobserveOnEnter: true,
+  });
+
+  const [cardRef2, is2Visible] = useInView({
+    threshold: 1,
+    unobserveOnEnter: true,
+  });
+
+  const [cardRef3, is3Visible] = useInView({
+    threshold: 1,
+    unobserveOnEnter: true,
+  });
+
+  const [cardRef4, is4Visible] = useInView({
+    threshold: 1,
+    unobserveOnEnter: true,
+  });
+
   return (
     <>
       <Title>
@@ -16,8 +38,12 @@ const OurServices = () => {
         <div className="dash"></div>
       </Title>
 
+      {/* <DecoratedTitle color="#5bd178" pgName="Sobre o Instituto">
+        Nossos serviços
+      </DecoratedTitle> */}
+
       <Container>
-        <Card>
+        <Card ref={cardRef1} className={is1Visible ? 'animate' : 'initial'}>
           <div className="image">
             <img src={services1} alt="Programa Acesse" />
           </div>
@@ -31,7 +57,7 @@ const OurServices = () => {
             <div className="button">Saiba mais</div>
           </div>
         </Card>
-        <Card>
+        <Card ref={cardRef2} className={is2Visible ? 'animate' : 'initial'}>
           <div className="image">
             <img src={services2} alt="Programa Acelere" />
           </div>
@@ -47,7 +73,7 @@ const OurServices = () => {
             <div className="button">Saiba mais</div>
           </div>
         </Card>
-        <Card>
+        <Card ref={cardRef3} className={is3Visible ? 'animate' : 'initial'}>
           <div className="image">
             <img src={services3} alt="Cursos" />
           </div>
@@ -60,7 +86,7 @@ const OurServices = () => {
             <div className="button">Saiba mais</div>
           </div>
         </Card>
-        <Card>
+        <Card ref={cardRef4} className={is4Visible ? 'animate' : 'initial'}>
           <div className="image">
             <img
               src={services4}

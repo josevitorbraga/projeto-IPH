@@ -19,10 +19,10 @@ export const Container = styled.div`
 
 export const FullWidth = styled.div`
   display: flex;
+  //margin: 60px 170px;
 
   img {
     width: 100%;
-    height: 500px;
   }
 `;
 

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './pages/Home';
+import Metodologia from './pages/Metodologia';
 import Sobre from './pages/Sobre';
 
 const App = () => {
@@ -10,8 +11,9 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/sobre' element={<Sobre />} />
-        <Route path='/' element={<Home />} />
+        <Route path="/metodologia" element={<Metodologia />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </BrowserRouter>

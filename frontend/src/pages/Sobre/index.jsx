@@ -1,8 +1,8 @@
 import React from 'react';
 
 import TopPage from '../../components/TopPage';
-import SobreBoxComponent from '../../components/SobreBoxComponent';
-import SobreContentComponent from '../../components/SobreContentComponent';
+import SobreBoxComponent from '../../components/contentForTopPage/SobrePage/SobreBoxComponent';
+import SobreContentComponent from '../../components/contentForTopPage/SobrePage/SobreContentComponent';
 import DecoratedTitle from '../../components/DecoratedTitle';
 import OurServices from '../../components/OurServices';
 import Newsletter from '../../components/Newsletter';
@@ -17,7 +17,8 @@ const Sobre = () => {
   return (
     <>
       <TopPage
-        bgColor="#F1F9FF"
+        secondaryColor="#F1F9FF"
+        bgColor="#5BD178"
         BoxComponent={SobreBoxComponent}
         ContentComponent={SobreContentComponent}
       />

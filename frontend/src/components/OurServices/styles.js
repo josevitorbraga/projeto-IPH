@@ -7,6 +7,29 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .initial {
+    .image {
+      right: -27%;
+    }
+    .content {
+      flex: 0;
+    }
+  }
+
+  .animate {
+    .image {
+      animation: imgAnimate 0.5s ease-in-out;
+    }
+    .content {
+      animation: contentAnimate 0.5s ease-in-out;
+    }
+    .title,
+    .text,
+    .button {
+      animation: textAnimate 0.6s ease-in-out;
+    }
+  }
 `;
 
 export const Title = styled.div`
@@ -43,7 +66,7 @@ export const Card = styled.div`
 
   @keyframes imgAnimate {
     0% {
-      right: -29%;
+      right: -27%;
     }
     100% {
       right: 0;
@@ -73,7 +96,7 @@ export const Card = styled.div`
 
   .image {
     position: relative;
-    animation: imgAnimate 1s ease-in-out;
+    //animation: imgAnimate 1s ease-in-out;
     width: 530px;
     z-index: 1;
 
@@ -84,7 +107,7 @@ export const Card = styled.div`
   }
 
   .content {
-    animation: contentAnimate 1s ease-in-out;
+    //animation: contentAnimate 1s ease-in-out;
     width: 480px;
     padding: 70px;
     display: flex;
@@ -103,16 +126,16 @@ export const Card = styled.div`
       color: #21253c;
       margin-bottom: 15px;
 
-      animation: textAnimate 1.5s ease-in-out;
+      //animation: textAnimate 1.5s ease-in-out;
     }
     .text {
-      animation: textAnimate 1.5s ease-in-out;
+      //animation: textAnimate 1.5s ease-in-out;
 
       font-size: 20px;
       color: #707070;
     }
     .button {
-      animation: textAnimate 1.5s ease-in-out;
+      // textAnimate 1.5s ease-in-out;
 
       display: flex;
       justify-content: center;

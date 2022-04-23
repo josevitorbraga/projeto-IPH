@@ -2,16 +2,16 @@ import React from 'react';
 
 import { Container, Content, Image } from './styles';
 
-import img from '../../assets/sobre-content.svg';
+import img from '../../../../assets/sobre-content.svg';
 
 const SobreContentComponent = () => {
   return (
     <Container>
       <Image>
-        <img src={img} alt='Potencialidades' />
+        <img src={img} alt="Potencialidades" />
       </Image>
       <Content>
-        <div className='text'>
+        <div className="text">
           <p>
             Mapear as potencialidades do <br />
             indivíduo, através da <br />
